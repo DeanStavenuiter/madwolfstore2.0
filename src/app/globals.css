@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: whitesmoke;
+  background: 
+  /* url("/raster-bg.webp") no-repeat center top, */
+    linear-gradient(
+      135deg,
+      rgb(0, 0, 0) 5%,
+      rgb(4, 4, 4) 10%,
+      rgb(8, 8, 8) 15%,
+      rgb(12, 12, 12) 20%,
+      rgb(16, 16, 16) 25%,
+      rgb(20, 20, 20) 30%,
+      rgb(24, 24, 24) 35%,
+      rgb(28, 28, 28) 40%,
+      rgb(32, 32, 32) 45%,
+      rgb(36, 36, 36) 50%,
+      rgb(40, 40, 40) 55%,
+      rgb(44, 44, 44) 60%,
+      rgb(48, 48, 48) 65%,
+      rgb(52, 52, 52) 70%,
+      rgb(56, 56, 56) 75%,
+      rgb(60, 60, 60) 80%,
+      rgb(64, 64, 64) 85%,
+      rgb(68, 68, 68) 90%,
+      rgb(72, 72, 72) 95%,
+      rgb(76, 76, 76) 100%
+      );
+}
+
+
+
