@@ -5,7 +5,7 @@ const getUserSession = async () => {
   try {
     const session = await auth();
     if (session && session.user) {
-      const user = session.user as User;
+      const user = session.user;
 
       return new Promise((resolve) => {
         resolve({

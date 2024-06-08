@@ -3,11 +3,15 @@ import profilePicPlaceHolder from "../../../public/placeholder/profile-pic-place
 // import { Toaster } from 'react-hot-toast';
 import Link from "next/link";
 import React from "react";
-import { UserMenuButtonProps } from "../typescript/types";
+import { User, UserMenuButtonProps } from "../typescript/types";
 import { SignIn } from "./SignIn";
 import { SignOut } from "./SignOut";
+import { auth } from "@/auth";
 
-const UserMenuButton: React.FC<UserMenuButtonProps> = ({ user }) => {
+const UserMenuButton: React.FC<UserMenuButtonProps> = async() => {
+  const session = await auth();
+  const user = session?.user as User;
+  
   return (
     <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-circle btn-ghost m-0">

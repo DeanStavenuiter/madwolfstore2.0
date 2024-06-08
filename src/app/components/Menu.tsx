@@ -1,6 +1,7 @@
 import React from "react";
 import TopBar from "./TopBar";
 import Navbar from "./Navbar";
+import { User } from "../typescript/types";
 
 const Menu = () => {
   return (

@@ -4,12 +4,16 @@ import Starfield from "../components/Space";
 import { redirect } from "next/navigation";
 import getUserRole from "../library/functions/GetUserRole";
 import SideMenuDashboard from "../components/SideMenuDashboard";
+import { auth } from "@/auth";
+import { User } from "../typescript/types";
 
 const page = async () => {
-  const role = await getUserRole();
+  const session = await auth();
+  const user = session?.user as User;
+  // const role = await getUserRole();
 
-  console.log("ROLE ",role);
-  if (role !== "wolf") {
+  // console.log("ROLE ",role);
+  if (user.role !== "wolf") {
     redirect("/");
   }
 

@@ -5,9 +5,13 @@ import { auth } from "@/auth";
 import UserMenuButton from "./UserMenuButton";
 import getUserSession from "../library/functions/GetUserSession";
 import Link from "next/link";
+import { User } from "../typescript/types";
+
 
 const Navbar = async () => {
-  const user = await getUserSession();
+//   const session = await auth();
+//  const user = session?.user as User;
+  // const user = await getUserSession() as unknown as User
 
   return (
     <nav className="w-full bg-[--grey] shadow-[0px_5px_15px_#4e4e4e15] sticky ">
@@ -22,7 +26,7 @@ const Navbar = async () => {
             </div>
             <SearchBar />
             <ShoppingCartButton cart={""} />
-            <UserMenuButton user={user} />
+            <UserMenuButton />
           </div>
         </div>
       </div>
