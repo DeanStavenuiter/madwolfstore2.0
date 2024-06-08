@@ -1,20 +1,20 @@
 "use client"
 
-import { formatPrice } from '@/app/library/functions/formatPrice'
+// import { formatPrice } from '@/app/library/functions/formatPrice'
 import Link from 'next/link'
 import React from 'react'
 
 
 
-const ShoppingCartButton = ({cart}) => {
+const ShoppingCartButton = () => {
 
-    const CloseDropdown = () => {
-        const dropdown = document.activeElement as HTMLElement;
+    // const CloseDropdown = () => {
+    //     const dropdown = document.activeElement as HTMLElement;
     
-        if (dropdown) {
-          dropdown.blur();
-        }
-      };
+    //     if (dropdown) {
+    //       dropdown.blur();
+    //     }
+    //   };
 
   return (
 <div></div>
