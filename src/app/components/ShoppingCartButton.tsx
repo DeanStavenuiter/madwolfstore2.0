@@ -6,15 +6,15 @@ import React from 'react'
 
 
 
-const ShoppingCartButton = () => {
+const ShoppingCartButton = ({cart}: any) => {
 
-    // const CloseDropdown = () => {
-    //     const dropdown = document.activeElement as HTMLElement;
+    const CloseDropdown = () => {
+        const dropdown = document.activeElement as HTMLElement;
     
-    //     if (dropdown) {
-    //       dropdown.blur();
-    //     }
-    //   };
+        if (dropdown) {
+          dropdown.blur();
+        }
+      };
 
   return (
 <div></div>
