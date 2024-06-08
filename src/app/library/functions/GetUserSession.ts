@@ -6,11 +6,12 @@ const getUserSession = async () => {
     const session = await auth();
     if (session && session.user) {
       const user = session.user as User;
-      return {
-        id: user.id,
-        image: user.image,
-        role: user.role,
-      };
+
+      return new Promise((resolve) => {
+        resolve({
+          user,
+        });
+      });
     }
   } catch (error) {
     console.error("Error getting user session", error);

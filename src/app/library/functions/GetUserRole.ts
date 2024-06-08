@@ -7,7 +7,9 @@ const getUserRole = async () => {
 
     if (session && session.user) {
       const user = session.user as User;
-      return user.role;
+      return new Promise((resolve) => {
+        resolve(user.role);
+      });
     }
   } catch (error) {
     console.error("Error getting user role", error);
