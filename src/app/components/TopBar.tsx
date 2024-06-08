@@ -3,8 +3,8 @@ import React from "react";
 const TopBar = () => {
   return (
     <div className="h-[35px] bg-[#3a3a3a] w-full">
-      <div className="max-w-screen-xl h-full flex justify-center items-center m-[0_auto]">
-        <ul className="text-[13px] flex justify-evenly w-full">
+      <div className="h-full flex justify-center items-center m-[0_auto]">
+        <ul className="text-[13px] flex justify-evenly sm:justify-between w-full mx-[15px]">
           <li className="flex items-center gap-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"

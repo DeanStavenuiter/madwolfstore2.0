@@ -5,7 +5,8 @@ export interface User {
     name?: string;
     email?: string;
     emailVerified?: boolean | null;  
-    image?: string | null;           
+    image?: string | null;         
+    role?: string;  
     accounts?: any[];                
     sessions?: any[];                
     createdAt?: string;

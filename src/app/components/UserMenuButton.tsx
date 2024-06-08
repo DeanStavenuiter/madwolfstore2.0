@@ -1,41 +1,23 @@
-"use client";
-
 import Image from "next/image";
-import profilePicPlaceHolder from '/profile-pic-placeholder.png';
-import { signIn, signOut } from "next-auth/react";
+import profilePicPlaceHolder from "../../../public/placeholder/profile-pic-placeholder.png";
 // import { Toaster } from 'react-hot-toast';
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import React from "react";
 import { UserMenuButtonProps } from "../typescript/types";
+import { SignIn } from "./SignIn";
+import { SignOut } from "./SignOut";
 
-
-
-const UserMenuButton: React.FC<UserMenuButtonProps> = ({user}) => {
-  // const user = session?.user;
-  // const [role, setRole] = useState(false);
-
-  // useEffect(() => {
-  //   const getRole = async () => {
-  //     const response = await axios.get('/api/users/name');
-  //     setRole(response.data);
-  //     // return response.data;
-  //   };
-
-  //   getRole();
-  // }, []);
-
+const UserMenuButton: React.FC<UserMenuButtonProps> = ({ user }) => {
   return (
     <div className="dropdown dropdown-end">
-      <label tabIndex={0} className="btn btn-circle btn-ghost">
+      <label tabIndex={0} className="btn btn-circle btn-ghost m-0">
         {user ? (
           <Image
             src={user?.image || profilePicPlaceHolder}
             alt="Profile picture"
-            width={40}
-            height={40}
-            className="w-10 rounded-full"
+            width={35}
+            height={35}
+            className="w-[35px] rounded-full"
           />
         ) : (
           <svg
@@ -53,35 +35,26 @@ const UserMenuButton: React.FC<UserMenuButtonProps> = ({user}) => {
           </svg>
         )}
       </label>
-      {/* <ul
+      <ul
         tabIndex={0}
-        className='bg-gray-900-800 menu dropdown-content rounded-box menu-sm z-30 mt-3 w-52 bg-[rgb(30,35,42)] text-gray-400 shadow'
+        className="bg-[--grey] menu dropdown-content rounded-[5px] menu-sm z-30 mt-3 w-[135px] shadow"
       >
-        {role === true ? (
-          <>
-            <li>
-              <Link href={'/dashboard'}>
-                <button>Dashboard</button>
-              </Link>
-            </li>
-          </>
-        ) : (
-          ''
+        {user?.role === "wolf" && (
+          <li>
+            <Link href={"/dashboard"}>Dashboard</Link>
+          </li>
         )}
         <li>
           {user ? (
             <>
-              <Link href={'/profile'}>Profile</Link>
-
-              <button onClick={() => signOut({ callbackUrl: '/' })}>
-                Sign Out
-              </button>
+              <Link href={"/profile"}>Profile</Link>
+              <SignOut />
             </>
           ) : (
-            <button onClick={() => signIn()}>Sign In</button>
+            <SignIn />
           )}
         </li>
-      </ul> */}
+      </ul>
       {/* <Toaster /> */}
     </div>
   );
