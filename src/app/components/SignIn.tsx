@@ -1,16 +1,10 @@
-import { signIn } from "@/auth";
+"use client"
+import { signIn } from "next-auth/react";
 import Image from "next/image";
 
 export function SignIn() {
   return (
-    <form
-      action={async () => {
-        "use server";
-        await signIn("google");
-      }}
-      className=""
-    >
-      <button type="submit" className="flex flex-row gap-3 items-center">
+      <button onClick={() => signIn("google")} className="flex flex-row gap-3 items-center">
         <Image
           className=""
           width={15}
@@ -20,6 +14,5 @@ export function SignIn() {
         />
         Sign in{" "}
       </button>
-    </form>
   );
 }

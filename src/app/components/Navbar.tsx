@@ -1,20 +1,13 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import ShoppingCartButton from "./ShoppingCartButton";
-import { auth } from "@/auth";
 import UserMenuButton from "./UserMenuButton";
-import getUserSession from "../library/functions/GetUserSession";
 import Link from "next/link";
-import { User } from "../typescript/types";
 
-
-const Navbar = async () => {
-//   const session = await auth();
-//  const user = session?.user as User;
-  // const user = await getUserSession() as unknown as User
+const Navbar =  () => {
 
   return (
-    <nav className="w-full bg-[--grey] shadow-[0px_5px_15px_#4e4e4e15] sticky ">
+    <nav className="w-full bg-[--grey] shadow-[0px_5px_15px_#4e4e4e15] sticky border-solid border-b-[0.5px] border-b-[#414244]">
       <div className="flex justify-center mx-[15px]">
         <div className="flex sm:flex-row sm:justify-between w-full">
           {/* <Logo /> */}

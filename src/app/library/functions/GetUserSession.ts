@@ -1,21 +1,19 @@
-import { User } from "@/app/typescript/types";
-import { auth } from "@/auth";
+// "use server";
+// // import getSession from "../getSession";
+// import { User } from "next-auth";
 
-const getUserSession = async () => {
-  try {
-    const session = await auth();
-    if (session && session.user) {
-      const user = session.user;
+// const getUserSession = async () => {
+//   try {
+//     const session = await getSession();
+//     if (session && session.user) {
+//       const user = session.user as User;
 
-      return new Promise((resolve) => {
-        resolve({
-          user,
-        });
-      });
-    }
-  } catch (error) {
-    console.error("Error getting user session", error);
-  }
-};
+//       return user;
+//     }
+//     return null;
+//   } catch (error) {
+//     console.error("Error getting user session", error);
+//   }
+// };
 
-export default getUserSession;
+// export default getUserSession;

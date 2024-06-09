@@ -64,3 +64,12 @@ body {
   --tw-text-opacity: 1;
   color: var(--fallback-nc, oklch(var(--nc) / var(--tw-text-opacity)));
 }
+
+.text-destructive{
+  color: #bd0808;
+  font-weight:300;
+}
+
+.font-medium{
+  font-weight: 300;
+}

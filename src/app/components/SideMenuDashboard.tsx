@@ -15,7 +15,7 @@ const SideMenuDashboard = () => {
         <div>
           <ul>
             <li className="p-3 btn-ghost w-full rounded-none ">
-              <Link href={""}>
+              <Link href={"/dashboard"}>
                 <div className="p-1 flex items-center gap-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ const SideMenuDashboard = () => {
             </li>
 
             <li className="p-3 btn-ghost w-full rounded-none ">
-              <Link href={""}>
+              <Link href={"/dashboard/products"}>
                 <div className="p-1 flex items-center gap-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ const SideMenuDashboard = () => {
             </li>
 
             <li className="p-3 btn-ghost w-full rounded-none ">
-              <Link href={""}>
+              <Link href={"/dashboard/orders"}>
                 <div className="p-1 flex items-center gap-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ const SideMenuDashboard = () => {
             </li>
 
             <li className="p-3 btn-ghost w-full rounded-none ">
-              <Link href={""}>
+              <Link href={"/dashboard/users"}>
                 <div className="p-1 flex items-center gap-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ const SideMenuDashboard = () => {
             </li>
 
             <li className="p-3 btn-ghost w-full rounded-none ">
-              <Link href={""}>
+              <Link href={"/dashboard/settings"}>
                 <div className="p-1 flex items-center gap-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

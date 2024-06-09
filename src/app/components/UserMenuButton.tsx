@@ -1,17 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import profilePicPlaceHolder from "../../../public/placeholder/profile-pic-placeholder.png";
-// import { Toaster } from 'react-hot-toast';
 import Link from "next/link";
 import React from "react";
-import { User, UserMenuButtonProps } from "../typescript/types";
 import { SignIn } from "./SignIn";
 import { SignOut } from "./SignOut";
-import { auth } from "@/auth";
+import { useSession } from "next-auth/react";
 
-const UserMenuButton: React.FC<UserMenuButtonProps> = async() => {
-  const session = await auth();
-  const user = session?.user as User;
-  
+const UserMenuButton = () => {
+  const session = useSession();
+  const user = session.data?.user;
+
   return (
     <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-circle btn-ghost m-0">
@@ -52,6 +52,7 @@ const UserMenuButton: React.FC<UserMenuButtonProps> = async() => {
           {user ? (
             <>
               <Link href={"/profile"}>Profile</Link>
+              <div className="separator-line" />
               <SignOut />
             </>
           ) : (
