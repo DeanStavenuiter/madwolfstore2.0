@@ -9,7 +9,7 @@ const SideMenuDashboard = () => {
     <div
       className={`${
         menuOpen ? "w-[260px]" : "w-[48px]"
-      } h-[calc(100%-83px)] bottom-0 bg-[--light-grey] z-10 fixed `}
+      } h-[calc(100%-83px)] bottom-0 bg-[--light-grey] z-20 fixed `}
     >
       <div className="flex justify-between flex-col h-full">
         <div>

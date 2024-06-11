@@ -8,27 +8,27 @@ const ProductTable = async () => {
 
   return (
     <div className=" relative z-10 flex flex-row flex-wrap justify-start gap-2 bg-black ">
-      <div className=" w-full ">
+      <div className="overflow-x-auto block">
         {!products.length ? (
           <div className="flex items-center justify-center">
             <span className="text">No products yet...</span>
           </div>
         ) : (
-          <table className="table w-full border-collapse">
+          <table className="table w-full block overflow-x-auto whitespace-nowrap">
             {/* head */}
             <thead>
               <tr className="border-b-[rgb(30,35,42)] text-gray-200">
                 {/* <th>Product Id</th> */}
-                <th className="min-w-[150px] w-full">Name</th>
-                <th className="min-w-[150px]">Type</th>
-                <th className="min-w-[150px]">Price</th>
-                <th className="min-w-[35px]">Stock</th>
-                <th className="min-w-[35px]">XS</th>
-                <th className="min-w-[35px]">S</th>
-                <th className="min-w-[35px]">M</th>
-                <th className="min-w-[35px]">L</th>
-                <th className="min-w-[35px]">XL</th>
-                <th className="min-w-[35px]">XXL</th>
+                <th className=" w-full">Name</th>
+                <th className="">Type</th>
+                <th className="">Price</th>
+                <th className="">Stock</th>
+                <th className="">XS</th>
+                <th className="">S</th>
+                <th className="">M</th>
+                <th className="">L</th>
+                <th className="">XL</th>
+                <th className="">XXL</th>
               </tr>
             </thead>
             <tbody>

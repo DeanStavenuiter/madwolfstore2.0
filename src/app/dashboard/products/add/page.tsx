@@ -16,26 +16,19 @@ const page = () => {
           speedFactor={0.005}
           backgroundColor="black"
         />
-        <SideMenuDashboard />
-        <div className="flex-1 flex items-center justify-center ">
-          {/* <div className="absolute top-[95px] right-[15px] flex justify-end w-full"></div> */}
-          <div className="flex pt-[110px] pl-[30px] w-full h-full ">
-            <div className="ml-[260px] flex items-start flex-col w-full ">
-              <div className="flex justify-between max-w-[781px] w-full">
-                <div className="uppercase justify-center items-center flex font-bold">
-                  <h1>New Product</h1>
-                </div>
-
-                {/* <Link href="/dashboard/products/add">
-                  <div className="glass p-[10px] max-w-[110px] flex justify-center items-center">
-                    <div className="">
-                      <span>Add product</span>
-                    </div>
+        <div>
+          <SideMenuDashboard />
+          <div className="flex-1 flex items-center justify-center ">
+            {/* <div className="absolute top-[95px] right-[15px] flex justify-end w-full"></div> */}
+            <div className="flex pt-[110px] pl-[30px] w-full h-full ">
+              <div className="ml-[260px] flex items-start flex-col w-full ">
+                <div className="flex justify-between max-w-[781px] w-full">
+                  <div className="uppercase justify-center items-center flex font-bold">
+                    <h1>New Product</h1>
                   </div>
-                </Link> */}
+                </div>
+                <ProductForm />
               </div>
-              <ProductForm />
-              {/* <ProductTable /> */}
             </div>
           </div>
         </div>
