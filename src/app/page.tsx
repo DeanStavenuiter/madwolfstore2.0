@@ -1,19 +1,28 @@
 import Menu from "./components/Menu";
-import LogoAnimation from "./components/logoAnimation";
+import LogoAnimationHome from "./components/home/logoAnimationHome";
 import Starfield from "./components/Space";
+import CategoryHome from "./components/home/CategoryHome";
+import FeaturedProductsHome from "./components/home/FeaturedProductsHome";
+import MadwolfArtHome from "./components/home/MadwolfArtHome";
+import ReviewsHome from "./components/home/ReviewsHome";
 
 export default async function Home() {
   return (
-    <div className="">
+    <div className="max-h-[-webkit-fill-available]">
+      <Starfield
+        starCount={1500}
+        starColor={[255, 255, 255]}
+        speedFactor={0.005}
+        backgroundColor="black"
+      />
       <Menu />
-      <main className="flex min-h-screen flex-col items-center justify-center p-[15px] max-w-screen-xl m-[0_auto]">
-        <Starfield
-          starCount={1500}
-          starColor={[255, 255, 255]}
-          speedFactor={0.005}
-          backgroundColor="black"
-        />
-        <LogoAnimation />
+      <main className="flexflex-col items-center justify-center p-[15px] max-w-screen-xl m-[0_auto]">
+        <LogoAnimationHome />
+        <FeaturedProductsHome />
+        <CategoryHome />
+        <MadwolfArtHome />
+        <ReviewsHome />
+        
       </main>
     </div>
   );

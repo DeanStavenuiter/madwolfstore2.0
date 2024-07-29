@@ -3,8 +3,8 @@ import SideMenuDashboard from "@/app/components/SideMenuDashboard";
 import Starfield from "@/app/components/Space";
 import Link from "next/link";
 import React from "react";
-import { getProducts } from "./getProducts";
 import ProductTable from "@/app/components/ProductTable";
+import { Button } from "@/components/ui/button";
 
 const page = () => {
   return (
@@ -26,13 +26,8 @@ const page = () => {
                 <div className="uppercase justify-center items-center flex font-bold">
                   <h1>Products</h1>
                 </div>
-
                 <Link href="/dashboard/products/add">
-                  <div className="glass p-[10px] max-w-[110px] flex justify-center items-center">
-                    <div className="">
-                      <span>Add product</span>
-                    </div>
-                  </div>
+                  <Button className="bg-white text-black hover:bg-[#efefef] hover:text-[#393939] font-[500]">Add product</Button>
                 </Link>
               </div>
 

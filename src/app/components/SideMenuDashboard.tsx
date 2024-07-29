@@ -9,12 +9,12 @@ const SideMenuDashboard = () => {
     <div
       className={`${
         menuOpen ? "w-[260px]" : "w-[48px]"
-      } h-[calc(100%-83px)] bottom-0 bg-[--light-grey] z-20 fixed `}
+      } h-[calc(100%-83px)] bottom-0 bg-[--grey] z-20 fixed `}
     >
       <div className="flex justify-between flex-col h-full">
         <div>
           <ul>
-            <li className="p-3 btn-ghost w-full rounded-none ">
+            <li className="p-3 hover:bg-[--light-grey] w-full rounded-none  ">
               <Link href={"/dashboard"}>
                 <div className="p-1 flex items-center gap-2">
                   <svg
@@ -31,7 +31,7 @@ const SideMenuDashboard = () => {
               </Link>
             </li>
 
-            <li className="p-3 btn-ghost w-full rounded-none ">
+            <li className="p-3 hover:bg-[--light-grey] w-full rounded-none ">
               <Link href={"/dashboard/products"}>
                 <div className="p-1 flex items-center gap-2">
                   <svg
@@ -48,7 +48,7 @@ const SideMenuDashboard = () => {
               </Link>
             </li>
 
-            <li className="p-3 btn-ghost w-full rounded-none ">
+            <li className="p-3 hover:bg-[--light-grey] w-full rounded-none ">
               <Link href={"/dashboard/orders"}>
                 <div className="p-1 flex items-center gap-2">
                   <svg
@@ -65,7 +65,7 @@ const SideMenuDashboard = () => {
               </Link>
             </li>
 
-            <li className="p-3 btn-ghost w-full rounded-none ">
+            <li className="p-3 hover:bg-[--light-grey] w-full rounded-none ">
               <Link href={"/dashboard/users"}>
                 <div className="p-1 flex items-center gap-2">
                   <svg
@@ -82,7 +82,7 @@ const SideMenuDashboard = () => {
               </Link>
             </li>
 
-            <li className="p-3 btn-ghost w-full rounded-none ">
+            <li className="p-3 hover:bg-[--light-grey] w-full rounded-none ">
               <Link href={"/dashboard/settings"}>
                 <div className="p-1 flex items-center gap-2">
                   <svg
@@ -103,7 +103,7 @@ const SideMenuDashboard = () => {
 
         <div
           className={`flex items-center p-3  ${
-            menuOpen ? "justify-end" : "justify-center btn-ghost"
+            menuOpen ? "justify-end" : "justify-center hover:bg-[--light-grey]"
           }`}
         >
           {menuOpen ? (
@@ -115,7 +115,7 @@ const SideMenuDashboard = () => {
                 viewBox="0 -960 960 960"
                 width="24px"
                 fill="#e8eaed"
-                className="hover:cursor-pointer btn-ghost"
+                className="hover:cursor-pointer hover:bg-[--light-grey]"
                 onClick={() => setMenuOpen(!menuOpen)}
               >
                 <path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z" />

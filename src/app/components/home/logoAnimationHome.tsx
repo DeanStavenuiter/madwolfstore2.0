@@ -1,17 +1,8 @@
-'use client';
-
-import { useState } from 'react';
-import ButtonHome from './ButtonHome';
-
-const LogoAnimation = () => {
-
-  const [buttonClicked, setButtonClicked] = useState(false);
-  const [showButton, setShowButton] = useState(false);
-
+const LogoAnimationHome = () => {
   return (
-    <div className={`${buttonClicked ? 'hidden' : ''} h-screen`}>
-      <div className='grid place-items-center sm:h-[calc(100%-10rem)]'>
-        <div className='flex animate-logoAnimation items-center justify-center pl-5 pr-5 sm:pl-0 sm:pr-0'>
+    <div className="p-[15px] min-h-screen">
+      <div className='flex justify-center items-center min-h-screen'>
+        <div className='flex h-full animate-logoAnimation items-center justify-center pl-5 pr-5 sm:pl-0 sm:pr-0'>
           <video
             autoPlay
             muted
@@ -37,15 +28,8 @@ const LogoAnimation = () => {
           </video>
         </div>
       </div>
-
-      {/* <ButtonHome
-        buttonClicked={buttonClicked}
-        showButton={showButton}
-        setShowButton={setShowButton}
-        setButtonClicked={setButtonClicked}
-      /> */}
     </div>
   );
 };
 
-export default LogoAnimation;
+export default LogoAnimationHome;

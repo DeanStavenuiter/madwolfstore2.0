@@ -12,6 +12,9 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { AddProductInput, addProductSchema } from "../library/validations";
 import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Separator } from "@radix-ui/react-select";
+import { DropdownMenuSeparator } from "@/components/ui/dropdown-menu";
 
 const ProductForm = () => {
   const form = useForm<AddProductInput>({
@@ -232,9 +235,22 @@ const ProductForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Type</FormLabel>
-                <FormControl>
+                <Select {...field} defaultValue="">
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Select a type" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-black">
+                    <SelectGroup >
+                      <SelectLabel>Type</SelectLabel>
+                      <DropdownMenuSeparator/>
+                      <SelectItem className="cursor-pointer" value="T-shirt">T-shirt</SelectItem>
+                      <SelectItem className="cursor-pointer" value="Hoodie">Hoodie</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+                {/* <FormControl>
                   <Input placeholder="type" {...field} />
-                </FormControl>
+                </FormControl> */}
                 <FormMessage />
               </FormItem>
             )}

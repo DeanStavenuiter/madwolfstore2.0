@@ -2,6 +2,7 @@ import React from "react";
 import { getProducts } from "../dashboard/products/getProducts";
 import Link from "next/link";
 import { formatPrice } from "../library/functions/formatPrice";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 const ProductTable = async () => {
   const products = await getProducts();
@@ -14,24 +15,24 @@ const ProductTable = async () => {
             <span className="text">No products yet...</span>
           </div>
         ) : (
-          <table className="table w-full block overflow-x-auto whitespace-nowrap">
+          <Table>
             {/* head */}
-            <thead>
-              <tr className="border-b-[rgb(30,35,42)] text-gray-200">
+            <TableHeader>
+              <TableRow className="border-b-[rgb(30,35,42)]">
                 {/* <th>Product Id</th> */}
-                <th className=" w-full">Name</th>
-                <th className="">Type</th>
-                <th className="">Price</th>
-                <th className="">Stock</th>
-                <th className="">XS</th>
-                <th className="">S</th>
-                <th className="">M</th>
-                <th className="">L</th>
-                <th className="">XL</th>
-                <th className="">XXL</th>
-              </tr>
-            </thead>
-            <tbody>
+                <TableHead className="">Name</TableHead>
+                <TableHead className="">Type</TableHead>
+                <TableHead className="">Price</TableHead>
+                <TableHead className="">Stock</TableHead>
+                <TableHead className="">XS</TableHead>
+                <TableHead className="">S</TableHead>
+                <TableHead className="">M</TableHead>
+                <TableHead className="">L</TableHead>
+                <TableHead className="">XL</TableHead>
+                <TableHead className="">XXL</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
               {products.map((product: any) => {
                 const sizeOrder = ["XS", "S", "M", "L", "XL", "XXL"];
                 // Sort the sizes array for each product
@@ -41,7 +42,7 @@ const ProductTable = async () => {
                 );
 
                 return (
-                  <tr
+                  <TableRow
                     key={product.id}
                     className=" border-b-[rgb(30,35,42)] odd:bg-[--grey] even:bg-[--bg-gradient]"
                   >
@@ -53,22 +54,22 @@ const ProductTable = async () => {
                         {product.id}
                       </Link>
                     </td> */}
-                    <td>
+                    <TableCell>
                       <Link href={`/dashboard/products/${product.id}`}>
                         {product.name}
                       </Link>
-                    </td>
-                    <td>{product.type}</td>
-                    <td>{formatPrice(product.price)}</td>
-                    <td
-                      className={
-                        product.stock === 0 ? "text-red-600" : "text-green-600"
-                      }
+                    </TableCell>
+                    <TableCell>{product.type}</TableCell>
+                    <TableCell>{formatPrice(product.price)}</TableCell>
+                    <TableCell
+                      className={`text-center
+                        ${product.stock === 0 ? "text-red-600" : "text-green-600"}
+                      `}
                     >
                       {product.stock}
-                    </td>
+                    </TableCell>
                     {sortedSizes.map((size: any) => (
-                      <td
+                      <TableCell
                         className={
                           size.quantity === 0
                             ? "text-red-600"
@@ -77,13 +78,13 @@ const ProductTable = async () => {
                         key={size.size}
                       >
                         {size.quantity}
-                      </td>
+                      </TableCell>
                     ))}
-                  </tr>
+                  </TableRow>
                 );
               })}
-            </tbody>
-          </table>
+            </TableBody>
+          </Table>
         )}
       </div>
     </div>

@@ -27,7 +27,7 @@ const SearchBar = () => {
               type="text"
               name="searchQuery"
               placeholder="Search..."
-              className="input input-bordered flex items-center min-w-[100px] w-full pl-12 bg-[--grey] h-[40px] rounded-[20px]"
+              className="input input-bordered border-[--light-grey] border-[1px] flex items-center min-w-[100px] w-full pl-12 bg-[--grey] h-[40px] rounded-[20px]"
             />
             {/* <div className="dropdown dropdown-end">
           <div className="card dropdown-content card-compact z-30 mt-3 w-52 bg-base-100 shadow">
