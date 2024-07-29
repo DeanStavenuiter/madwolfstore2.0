@@ -1,61 +1,25 @@
 import React from "react";
 import CarouselArt from "../carousels/CarouselArt";
+import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
+import { getArt } from "@/app/crud/getArt";
 
-const slides = [
-  {
-    id: 1,
-    name: "Art 1",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 2,
-    name: "Art 2",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 3,
-    name: "Art 3",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 4,
-    name: "Art 4",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 5,
-    name: "Art 5",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 6,
-    name: "Art 6",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 7,
-    name: "Art 7",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 8,
-    name: "Art 8",
-    image: "https://via.placeholder.com/150",
-  },
-];
+const MadwolfArtHome = async() => {
 
-const MadwolfArtHome = () => {
+  const art = await getArt();
+
+  console.log("Art", art)
+
   return (
     <div className="mt-[55px]">
       <h2 className="text-[28.4px]/[30px] font-black uppercase tracking-normal text-[#FFFFFF] md:text-[64px]/[64px]">
-        Explore Our Art Collection
+      <AnimatedShinyText>Explore Our Art Collection</AnimatedShinyText>
       </h2>
       <p>
         <span className="italic">Elevate</span> Your Home with{" "}
         <span className="font-bold">Beautiful</span> Art
       </p>
       <div className="mt-[25px]">
-        <CarouselArt slides={slides} options={{ loop: true }} />
+        <CarouselArt slides={art} options={{ loop: true, align: 'start' }} />
       </div>
     </div>
   );

@@ -1,32 +1,33 @@
-import React from 'react'
-import CarouselShirts from '../carousels/CarouselShirts';
-import { getProductsWithStock } from '../../crud/getProducts';
+import React from "react";
+import CarouselShirts from "../carousels/CarouselShirts";
+import { getTshirts } from "../../crud/getProducts";
+import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
 
-const FeaturedProductsHome = async() => {
-    const products = await getProductsWithStock({});
+const FeaturedProductsHome = async () => {
+  const products = await getTshirts({});
 
-    const video = products.map((product) => {
-      return {
-        id: product.id,
-        name: product.name,
-        webM: product.webMFile,
-        mp4: product.mp4File,
-        price: product.price,
-      };
-    });
+  const video = products.map((product) => {
+    return {
+      id: product.id,
+      name: product.name,
+      webM: product.webMFile,
+      mp4: product.mp4File,
+      price: product.price,
+    };
+  });
 
   return (
     <div className="mb-[75px]">
-    <h2 className="text-[28.4px]/[30px] font-black uppercase tracking-normal text-[#FFFFFF] md:text-[64px]/[64px]">
-      featured products
-    </h2>
-    <p className="text-[14px] font-light tracking-normal">
-      <span className="italic">Top</span>-Rated Featured Products You’ll{" "}
-      <span className="font-bold">Love</span>.
-    </p>
-    <CarouselShirts slides={video} options={{ loop: true }} />
-  </div>
-  )
-}
+      <h2 className="text-[28.4px]/[30px] font-black uppercase tracking-normal text-[#FFFFFF] md:text-[64px]/[64px]">
+        <AnimatedShinyText>featured products</AnimatedShinyText>
+      </h2>
+      <p className="text-[14px] font-light tracking-normal">
+        <span className="italic">Top</span>-Rated Featured Products You’ll{" "}
+        <span className="font-bold">Love</span>.
+      </p>
+      <CarouselShirts slides={video} options={{ loop: true, align: "start" }} />
+    </div>
+  );
+};
 
-export default FeaturedProductsHome
+export default FeaturedProductsHome;

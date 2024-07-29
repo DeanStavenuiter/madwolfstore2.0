@@ -1,5 +1,6 @@
 import React from "react";
 import CarouselReviews from "../carousels/CarouselReviews";
+import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
 
 const slides = [
   {
@@ -32,14 +33,14 @@ const ReviewsHome = () => {
   return (
     <div className="mt-[75px]">
       <h2 className="text-[28.4px]/[30px] font-black uppercase tracking-normal text-[#FFFFFF] md:text-[64px]/[64px]">
-        What Our Customers Say
+      <AnimatedShinyText> What Our Customers Say</AnimatedShinyText>
       </h2>
       <p className="text-[14px] font-light tracking-normal">
         Insightful <span className="italic">Reviews</span> from{" "}
         <span className="font-bold">Satisfied</span> Shoppers.
       </p>
       <div className="mt-[25px]">
-        <CarouselReviews slides={slides} options={{ loop: true }} />
+        <CarouselReviews slides={slides} options={{ loop: true, align: 'start' }} />
       </div>
     </div>
   );

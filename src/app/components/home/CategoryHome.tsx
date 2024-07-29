@@ -1,10 +1,11 @@
+import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
 import React from "react";
 
 const CategoryHome = () => {
   return (
     <div>
       <h2 className="text-[28.4px]/[30px] font-black uppercase tracking-normal text-[#FFFFFF] md:text-[64px]/[64px]">
-        Shop by category
+        <AnimatedShinyText>Shop by category</AnimatedShinyText>
       </h2>
       <p className="text-[14px] font-light tracking-normal mb-[25px]">
         <span className="font-bold">Quality</span>

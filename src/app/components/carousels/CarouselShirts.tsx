@@ -22,6 +22,7 @@ interface EmblaCarouselProps {
 
 type EmblaOptionsType = {
   loop: boolean;
+  align: "start" | "center" | "end";
 };
 
 const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides, options }) => {
