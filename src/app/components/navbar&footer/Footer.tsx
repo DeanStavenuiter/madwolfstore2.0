@@ -1,17 +1,15 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import MW from "./MW";
 
 const Footer = () => {
   return (
-    <div className=" w-full bg-[#1c1c1c] h-full mt-[225px] pt-[100px] pb-[25px]">
+    <div className=" w-full bg-[#1c1c1c] h-full mt-[225px] pt-[100px] pb-[25px] px-[15px]">
       <div className="flex justify-center">
-        <div className="relative w-full max-w-screen-xl pt-[97px]">
-          <h2 className="absolute top-0 text-[129px] font-black uppercase tracking-normal text-[#FFFFFF] opacity-5">
+        <div className="relative pt-[44px] w-full max-w-screen-xl sm:pt-[97px]">
+          <h2 className="absolute top-0 text-[70px] sm:text-[129px] font-black uppercase tracking-normal text-[#FFFFFF] opacity-5">
             madwolf
           </h2>
-          <div className="mt-[15px] ml-[4px] flex flex-row justify-between gap-[25px]">
+          <div className="relative left-[2px] top-0 sm:mt-[15px] sm:ml-[4px] flex flex-wrap md:flex-nowrap flex-row justify-between gap-[25px]">
             <div className="flex flex-col max-w-[256px] w-full">
               <h3 className="mb-[45px] flex justify-start text-[31px] font-semibold tracking-normal text-white">
                 Madwolf
@@ -90,7 +88,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center mt-[35px]">
+      <div className="flex justify-start md:justify-center mt-[35px]">
         <span>This website is build by Dean Donovan</span>
       </div>
     </div>
