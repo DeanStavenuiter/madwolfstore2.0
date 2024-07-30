@@ -5,6 +5,7 @@ import CategoryHome from "./components/home/CategoryHome";
 import FeaturedProductsHome from "./components/home/FeaturedProductsHome";
 import MadwolfArtHome from "./components/home/MadwolfArtHome";
 import ReviewsHome from "./components/home/ReviewsHome";
+import BlogPostsHome from "./components/home/BlogPostsHome";
 
 export default async function Home() {
   return (
@@ -22,7 +23,7 @@ export default async function Home() {
         <CategoryHome />
         <MadwolfArtHome />
         <ReviewsHome />
-        
+        <BlogPostsHome />
       </main>
     </div>
   );

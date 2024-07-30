@@ -6,6 +6,7 @@ import Link from "next/link";
 import MW from "./MW";
 
 const Navbar = () => {
+  
   return (
     <nav className="w-full bg-[--grey] shadow-[0px_5px_15px_#4e4e4e15] sticky border-solid border-b-[0.5px] border-b-[#414244] px-5 xl:px-[unset]">
       <div className="flex justify-center w-full">
@@ -22,7 +23,7 @@ const Navbar = () => {
               </div>
               <div className="flex justify-center items-center">
                 <ShoppingCartButton cart={""} />
-                <UserMenuButton />
+                <UserMenuButton/>
               </div>
             </div>
           </div>

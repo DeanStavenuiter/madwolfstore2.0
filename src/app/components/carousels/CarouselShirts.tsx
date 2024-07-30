@@ -66,7 +66,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides, options }) => {
         <div className="embla__container">
           {slides.map((slide, index) => (
             <div
-              className="embla__slide relative hover:cursor-pointer"
+              className="flex-grow-0 flex-shrink-0 basis-[50%] md:basis-[15%] pl-4 m-w-0 relative hover:cursor-pointer"
               key={slide.id}
             >
               <Link href={`/products/${slide.id}`}>

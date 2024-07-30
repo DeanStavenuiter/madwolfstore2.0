@@ -20,7 +20,7 @@ export const getTshirts = cache(async ({
     include: {
       sizes: true,
     },
-    take: 6,
+    // take: 6,
   });
 
   return tShirts;

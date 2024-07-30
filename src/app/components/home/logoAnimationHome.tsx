@@ -1,6 +1,6 @@
 const LogoAnimationHome = () => {
   return (
-    <div className="p-[15px] min-h-screen">
+    <div className="p-[15px] min-h-svh">
       <div className='flex justify-center items-center min-h-screen'>
         <div className='flex h-full animate-logoAnimation items-center justify-center pl-5 pr-5 sm:pl-0 sm:pr-0'>
           <video

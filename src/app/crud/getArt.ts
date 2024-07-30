@@ -14,7 +14,7 @@ export const getArt = cache(async () => {
       type: "print",
     },
     orderBy: {
-      id: "desc",
+      id: "asc",
     },
     take: 6,
   });

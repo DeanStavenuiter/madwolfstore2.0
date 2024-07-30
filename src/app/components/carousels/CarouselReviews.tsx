@@ -64,7 +64,6 @@ import React from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import { DotButton, useDotButton } from "./CarouselButtonDots";
 import useEmblaCarousel from "embla-carousel-react";
-import Link from "next/link";
 import { BorderBeam } from "@/components/magicui/border-beam";
 
 type PropType = {
