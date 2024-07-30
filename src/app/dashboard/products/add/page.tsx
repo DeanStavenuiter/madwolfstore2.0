@@ -1,8 +1,7 @@
-import Menu from "@/app/components/Menu";
+import Menu from "@/app/components/navbar&footer/Menu";
 import SideMenuDashboard from "@/app/components/SideMenuDashboard";
 import Starfield from "@/app/components/Space";
 import ProductForm from "@/app/components/ProductForm";
-import Link from "next/link";
 import React from "react";
 
 const page = () => {

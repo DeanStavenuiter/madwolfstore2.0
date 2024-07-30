@@ -1,6 +1,6 @@
 import React from "react";
-import TopBar from "./TopBar";
-import Navbar from "./Navbar";
+import TopBar from "@/app/components/navbar&footer/TopBar";
+import Navbar from "@/app/components/navbar&footer/Navbar";
 
 const Menu = () => {
   return (

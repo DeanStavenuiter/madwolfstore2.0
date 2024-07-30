@@ -1,5 +1,5 @@
 import React from "react";
-import Menu from "@/app/components/Menu";
+import Menu from "@/app/components/navbar&footer/Menu";
 import Starfield from "@/app/components/Space";
 import SideMenuDashboard from "@/app/components/SideMenuDashboard";
 import getSession from "@/app/library/getSession";

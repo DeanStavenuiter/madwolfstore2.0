@@ -2,7 +2,7 @@
 import React from 'react'
 import { useSession } from "next-auth/react";
 import Image from "next/image";
-import profilePicPlaceHolder from "../../../public/placeholder/profile-pic-placeholder.png";
+import profilePicPlaceHolder from "/public/placeholder/profile-pic-placeholder.png";
 
 const UserImage = () => {
     const session = useSession()

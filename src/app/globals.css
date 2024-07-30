@@ -34,8 +34,7 @@
 
 body {
   color: rgb(245, 245, 245);
-  /* background: var(--bg-gradient); */
-  background: black;
+  background-image: linear-gradient(to bottom, #000000, #050505, #090909, #0d0d0d, #111111);
 }
 
 .bg-listitem:active {

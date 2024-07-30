@@ -2,7 +2,7 @@ import React from "react";
 
 const TopBar = () => {
   return (
-    <div className="h-[35px] bg-[#3a3a3a] w-full">
+    <div className="h-[35px] bg-[#333333] w-full">
       <div className="h-full flex justify-center">
         <div className="w-full max-w-screen-xl">
           <ul className="text-[13px] flex justify-between sm:justify-between w-full h-full items-center px-5 xl:px-[unset] ">

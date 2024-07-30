@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import profilePicPlaceHolder from "../../../public/placeholder/profile-pic-placeholder.png";
+import profilePicPlaceHolder from "/public/placeholder/profile-pic-placeholder.png";
 import Link from "next/link";
 import React, { useState } from "react";
-import { SignIn } from "./SignIn";
-import { SignOut } from "./SignOut";
+import { SignIn } from "@/app/components/SignIn";
+import { SignOut } from "@/app/components/SignOut";
 import { useSession } from "next-auth/react";
 import {
   DropdownMenu,
