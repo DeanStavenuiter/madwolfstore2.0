@@ -4,7 +4,7 @@ import { getTshirts } from "../../crud/getProducts";
 import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
 
 const FeaturedProductsHome = async () => {
-  const products = await getTshirts({});
+  const products = await getTshirts();
 
   const video = products.map((product) => {
     return {
