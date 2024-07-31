@@ -15,8 +15,8 @@ const Footer = () => {
                 Madwolf
               </h3>
               <p className="text-[15px]/[35px] font-normal tracking-normal text-white">
-                With Madwolf we focus on quality garments with tastefull
-                designs. All our designs are handmade.
+                With Madwolf we focus on <span className="font-bold">quality</span> garments with tastefull
+                designs. All our <span className="italic">designs</span> are <span className="font-bold">handmade</span>.
               </p>
             </div>
             <div className="flex flex-col max-w-[256px] w-full">
@@ -89,7 +89,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-start md:justify-center mt-[35px]">
-        <span>This website is build by Dean Donovan</span>
+        <span>This website is created by Dean Donovan</span>
       </div>
     </div>
   );

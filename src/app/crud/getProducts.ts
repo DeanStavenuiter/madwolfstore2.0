@@ -1,27 +1,47 @@
-import  prisma  from '@/app/library/prisma';
-import { cache } from 'react';
+import prisma from "@/app/library/prisma";
+import { cache } from "react";
 
-export interface HomeProps {
-}
-
-export const getTshirts = cache(async ({
-  // searchParams: { page = '1' },
-}: HomeProps) => {
-  const currentPage = parseInt('1');
-  const pageSize = 6;
-
+// get all t-shirts
+export const getTshirts = cache(async () => {
   const tShirts = await prisma.product.findMany({
     where: {
-      type: 'tshirt',
+      type: "tshirt",
     },
     orderBy: {
-      id: 'desc',
+      id: "desc",
     },
     include: {
       sizes: true,
     },
-    // take: 6,
   });
 
   return tShirts;
+});
+
+//get all Art
+export const getArt = cache(async () => {
+  const art = await prisma.product.findMany({
+    where: {
+      type: "print",
+    },
+    orderBy: {
+      id: "asc",
+    },
+    take: 6,
+  });
+
+  return art;
+});
+
+// get a product by id
+export const getProductById = cache(async (id: string) => {
+  const product = await prisma.product.findUnique({
+    where: {
+      id: id,
+    },
+    include: {
+      sizes: true,
+    },
+  });
+  return product;
 });

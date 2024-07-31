@@ -32,7 +32,7 @@ const slides = [
 const ReviewsHome = () => {
   return (
     <div className="mt-[75px]">
-      <h2 className="text-[28.4px]/[30px] font-black uppercase tracking-normal text-[#FFFFFF] md:text-[64px]/[64px]">
+      <h2 className="text-[28.4px]/[30px] font-black uppercase tracking-normal  bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-900 md:text-[64px]/[64px] ">
       <AnimatedShinyText> What Our Customers Say</AnimatedShinyText>
       </h2>
       <p className="text-[14px] font-light tracking-normal">

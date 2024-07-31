@@ -10,7 +10,7 @@ import Footer from "./components/navbar&footer/Footer";
 
 export default async function Home() {
   return (
-    <div className="max-h-[-webkit-fill-available] bg-[#000]">
+    <div className="max-h-[-webkit-fill-available]">
       {/* <Starfield
         starCount={1500}
         starColor={[255, 255, 255]}
@@ -18,7 +18,7 @@ export default async function Home() {
         backgroundColor="black"
       /> */}
       <Menu />
-      <main className="flexflex-col items-center justify-center p-[15px] max-w-screen-xl m-[0_auto]">
+      <main className="flex flex-col items-center justify-center p-[15px] max-w-screen-xl m-[0_auto]">
         <LogoAnimationHome />
         <FeaturedProductsHome />
         <CategoryHome />
