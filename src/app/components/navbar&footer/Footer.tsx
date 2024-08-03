@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className=" w-full bg-[#1c1c1c] h-full mt-[225px] pt-[100px] pb-[25px] px-[15px]">
+    <div className="relative z-10 bottom-0 w-full bg-[#1c1c1c] h-full pt-[100px] pb-[25px] px-[15px]">
       <div className="flex justify-center">
         <div className="relative pt-[44px] w-full max-w-screen-xl sm:pt-[97px]">
           <h2 className="absolute top-0 text-[70px] sm:text-[129px] font-black uppercase tracking-normal text-[#FFFFFF] opacity-5">
@@ -88,7 +88,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-start md:justify-center mt-[35px]">
+      <div className="flex text-[12px] justify-start md:justify-center mt-[35px]">
         <span>This website is created by Dean Donovan</span>
       </div>
     </div>

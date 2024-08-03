@@ -54,7 +54,7 @@ export default function Starfield(props: Props) { // Main component function
                 };
 
                 const putPixel = (x: number, y: number, brightness: number) => { // Function to draw a star pixel
-                    const radius = 0.8
+                    const radius = 0.9
                     const rgb =
                         'rgba(' + starColor[0] + ',' + starColor[1] + ',' + starColor[2] + ',' + brightness + ')';
                         c.fillStyle = rgb;

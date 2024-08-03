@@ -43,12 +43,11 @@ const VideoPlayer: React.FC<ProductProps> = ({ product }) => {
   };
 
   return (
-    <div className={`relative  flex items-center w-full`}>
+    <div className={`relative z-10 flex pb-[13px] items-center w-full`}>
       <div className="max-h-full">
-        <div className="overflow-hidden relative top-0 h-full max-h-[475px]">
           <video
             ref={videoRef}
-            className={`relative top-[-143px]`}
+            className={`relative`}
             loop
             muted
             autoPlay
@@ -62,20 +61,11 @@ const VideoPlayer: React.FC<ProductProps> = ({ product }) => {
           </video>
           <div
             ref={progressBarRef}
-            className={`absolute top-0 h-full w-full cursor-pointer bg-gray-300 `}
+            className={`h-full w-full cursor-pointer bg-gray-300 `}
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
-            // onMouseDown={handleMouseDown}
-            // onMouseUp={handleMouseUp}
-            // onMouseMove={handleMouseMove}
             style={{ background: "transparent" }}
           ></div>
-          {/* <div
-              ref={progressBarFillRef}
-              className='z-10 h-full bg-green-500'
-              // style={{ background: 'transparent' }}
-            ></div> */}
-        </div>
       </div>
     </div>
   );

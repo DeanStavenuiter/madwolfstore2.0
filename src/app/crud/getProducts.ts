@@ -45,3 +45,13 @@ export const getProductById = cache(async (id: string) => {
   });
   return product;
 });
+
+
+//get random products
+export const getRandomProducts = cache(async () => {
+  const products = await prisma.product.findMany();
+
+  const shuffledProducts = products.sort(() => Math.random() - 0.5);
+
+  return shuffledProducts.slice(0, 8);
+});

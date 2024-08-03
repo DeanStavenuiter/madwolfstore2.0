@@ -106,6 +106,10 @@ model Product {
   createdAt    DateTime      @default(now())
   updatedAt    DateTime      @updatedAt
   stock        Int?          @default(0)
+  imageUrl1Alt String?
+  imageUrl2Alt String?
+  imageUrl3Alt String?
+  imageUrl4Alt String?
 
   @@map("products")
 }

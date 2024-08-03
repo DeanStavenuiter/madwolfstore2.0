@@ -7,7 +7,7 @@ export const incrementProductQuantity = async (
   productId: string,
   selectedSize: string
 ) => {
-  console.log(' selectedSize ', selectedSize);
+  // console.log(' selectedSize ', selectedSize);
   //  Get the cart from the database or create a new one
   const cart = (await getCart()) ?? (await createCart());
 
@@ -41,5 +41,5 @@ export const incrementProductQuantity = async (
     console.log(' addProduct ', addProduct);
   }
 
-  revalidatePath('/products/[id]');
+  revalidatePath('/products/[id]', 'page');
 };

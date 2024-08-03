@@ -48,7 +48,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       // Remove properties from the user object
       if (extendedSession.user) {
         const userProps: (keyof AdditionalUserProps)[] = [
-          "id",
+          // "id",
           "name",
           "email",
           "role",
