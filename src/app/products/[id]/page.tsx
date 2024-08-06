@@ -4,12 +4,8 @@ import Menu from "@/app/components/navbar&footer/Menu";
 import OtherProducts from "@/app/components/productPage/OtherProducts";
 import ProductContent from "@/app/components/productPage/ProductContent";
 import ProductInfo from "@/app/components/productPage/ProductInfo";
-import VideoPlayer from "@/app/components/productPage/Videoplayer";
 import Starfield from "@/app/components/Space";
 import { getProductById } from "@/app/crud/getProducts";
-import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
-import Image from "next/image";
-import Link from "next/link";
 
 interface Params {
   params: {
@@ -102,12 +98,6 @@ const page = async ({ params: { id } }: Params) => {
   return (
     <div className="max-h-[-webkit-fill-available]">
       <Menu />
-      <Starfield
-        starCount={1500}
-        starColor={[255, 255, 255]}
-        speedFactor={0.005}
-        backgroundColor="black"
-      />
       <main className="p-[15px] pt-[75px] sm:p-[unset] min-h-0 h-full w-full flex justify-center mb-[225px]">
         <div className="max-w-screen-xl w-full h-full flex flex-col">
           <div className="flex w-full md:pt-[185px] flex-col md:flex-row justify-center">

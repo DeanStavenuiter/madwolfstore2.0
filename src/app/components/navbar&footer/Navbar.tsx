@@ -4,9 +4,12 @@ import ShoppingCartButton from "@/app/components/navbar&footer/ShoppingCartButto
 import UserMenuButton from "@/app/components/navbar&footer/UserMenuButton";
 import Link from "next/link";
 import MW from "@/app/components/navbar&footer/MW";
+import { getCart } from "@/app/crud/cart";
 
-const Navbar = () => {
-  
+const Navbar = async() => {
+
+  const cart = await getCart();
+ 
   return (
     <nav className="w-full bg-[#1c1c1c] shadow-[0px_5px_15px_#4e4e4e15] sticky border-solid border-b-[0.5px] border-b-[#414244] px-5 xl:px-[unset]">
       <div className="flex justify-center w-full">
@@ -21,8 +24,8 @@ const Navbar = () => {
               <div className="sm:flex items-centerz hidden ">
                 <SearchBar />
               </div>
-              <div className="flex justify-center items-center">
-                <ShoppingCartButton cart={""} />
+              <div className="flex justify-center items-center gap-4">
+                <ShoppingCartButton cart={cart}  />
                 <UserMenuButton/>
               </div>
             </div>

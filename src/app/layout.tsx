@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Barlow } from "next/font/google";
 import "./globals.css";
 import { SessionProvider } from "next-auth/react";
+import Starfield from "./components/Space";
 
 const barlow = Barlow({
   subsets: ["latin"],
@@ -22,6 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${barlow.className}`}>
+      <Starfield
+        starCount={1500}
+        starColor={[255, 255, 255]}
+        speedFactor={0.005}
+        backgroundColor="black"
+      />
         <SessionProvider>{children}</SessionProvider>
       </body>
     </html>

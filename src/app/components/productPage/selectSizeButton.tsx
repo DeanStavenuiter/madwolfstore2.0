@@ -76,7 +76,7 @@ const SelectSizeButton = ({
                 ? "hover:cursor-not-allowed  bg-neutral-700 bg-opacity-10 text-gray-100 text-opacity-30"
                 : "btn"
             }
-            flex justify-center btn-outline-dark mb-2 mr-1 min-w-[100px] max-w-[100px] rounded-[5px] border  bg-neutral-500 bg-opacity-20 py-3 font-bold normal-case text-gray-100 ${css}
+            flex justify-center btn-outline-dark mb-2 mr-1 min-w-[100px] max-w-[100px] rounded-[5px] border  bg-neutral-500 bg-opacity-20 py-3 font-bold text-gray-100 ${css}
             `}
             onClick={
               size.quantity > 0

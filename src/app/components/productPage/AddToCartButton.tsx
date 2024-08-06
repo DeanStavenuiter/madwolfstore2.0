@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { incrementProductQuantity } from "./actions";
+import { incrementProductQuantity } from "../../crud/addProductToCart";
 // import toast, { Toaster } from 'react-hot-toast';
 
 interface AddToCartButtonProps {

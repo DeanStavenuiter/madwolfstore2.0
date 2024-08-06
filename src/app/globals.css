@@ -30,30 +30,23 @@
   --grey: #282828;
   --text: rgb(245, 245, 245);
   --border: #414244;
+  --bg-grey: #333333;
 }
 
 body {
   color: rgb(245, 245, 245);
-  background-image: linear-gradient(to bottom, #000000, #050505, #090909, #0d0d0d, #111111);
+  background-image: linear-gradient(
+    to bottom,
+    #000000,
+    #050505,
+    #090909,
+    #0d0d0d,
+    #111111
+  );
 }
 
 .bg-listitem:active {
   background: var(--grey) !important;
-}
-
-@keyframes logoAnimation {
-  0% {
-    transform: translateY(-500px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.animate-logoAnimation {
-  animation: logoAnimation 1.2s ease-out;
 }
 
 .menu li > *:not(ul, .menu-title, details, .btn):active,
@@ -73,6 +66,15 @@ body {
 .font-medium {
   font-weight: 300;
 }
+
+.inset-shadow {
+  box-shadow: inset 0 0 0 0.2px #cccccc;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 
 /* carousel */
 
@@ -195,4 +197,74 @@ body {
 }
 .embla__dot--selected:after {
   box-shadow: inset 0 0 0 0.2rem rgb(222, 222, 222);
+}
+
+/* Keyframes and animations */
+
+@keyframes logoAnimation {
+  0% {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-logoAnimation {
+  animation: logoAnimation 1.2s ease-out;
+}
+
+@keyframes SlideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(400px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  animation: SlideInRight 0.3s linear 0s 1 normal forwards;
+}
+
+@keyframes SlideOutRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(400px);
+  }
+}
+
+.slide-out-right {
+  animation: SlideOutRight 0.3s linear 0s 1 normal forwards;
+}
+
+.btn:active {
+  animation: press 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn{
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes press {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

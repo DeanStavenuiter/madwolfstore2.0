@@ -4,7 +4,7 @@ import PriceTag from "./PriceTag";
 import { ProductProps } from "@/app/products/[id]/page";
 import SelectSizeButton from "./selectSizeButton";
 import AddToCartButton from "./AddToCartButton";
-import { incrementProductQuantity } from "./actions";
+import { incrementProductQuantity } from "../../crud/addProductToCart";
 
 const SizeAndAddtoCartButton: React.FC<ProductProps> = ({ product }) => {
   const [selectedSize, setSelectedSize] = useState("");
@@ -27,7 +27,7 @@ const SizeAndAddtoCartButton: React.FC<ProductProps> = ({ product }) => {
               onSelectSize={(selectedSize) => setSelectedSize(selectedSize)}
               css={
                 size.size === selectedSize
-                  ? "text-white border-[#adadad] bg-opacity-50"
+                  ? "text-white inset-shadow border-none bg-opacity-50"
                   : "border-none"
               }
             />
